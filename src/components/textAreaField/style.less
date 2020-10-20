@@ -1,0 +1,26 @@
+.textarea-field{
+  .ant-form-item-children {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &-icon {
+      margin-top: -11px !important;
+    }
+  }
+  .textarea-input {
+    cursor: auto;
+
+    &.disabled {
+      color: @grey-600;
+      border: 1px solid rgba(118, 118, 118, 0.3);
+      background-color: @grey-75;
+      cursor: not-allowed;
+      resize: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

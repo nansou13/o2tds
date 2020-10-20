@@ -1,0 +1,44 @@
+.icon-label-select{
+  animation-duration: 0s;
+  margin-right: 8px;
+  .ant-select-selection{
+    .ant-select-selection-selected-value {
+      color: @grey-800 !important;
+    }
+  }
+  .ant-btn{
+    width: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-label-select-icon-btn-active {
+    background: @neutral-200;
+  }
+  .icon{
+    width: 14px;
+    height: 14px;
+    line-height: 32px;
+    color: @neutral-600;
+  }
+  .icon-label-select-span {
+    background: @neutral-75;
+  }
+  &.small {
+    .icon-label-select-span {
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        background: @neutral-100;
+      }
+    }
+  }
+}
+.icon-label-select-dropdown{
+  width: 200px;
+}
+

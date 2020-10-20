@@ -1,0 +1,43 @@
+.widget-list-skeleton-loop (@i) when (@i > 0) {
+  &:nth-child(@{i}) {
+    opacity: (5/@i * 0.3);
+  }
+  .widget-list-skeleton-loop(@i - 1);
+}
+
+.widget-list-skeleton {
+  margin-top: 14px;
+  padding: 0 8px;
+
+  .ant-skeleton-header{
+    padding-right: 10px;
+  }
+
+  @iterations: 5;
+  .widget-list-skeleton-loop (@iterations);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .ant-skeleton-avatar-square {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.widget-empty-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-list-show-more {
+  color: @blue-800;
+  padding-left: 7px;
+}
+

@@ -1,0 +1,65 @@
+  .section {
+  background: transparent;
+  margin-bottom: 16px;
+
+  .ant-collapse-header {
+    display: flex;
+    align-items: center;
+  }
+
+  h3 {
+    display: inline-block;
+    color: @medium-grey;
+    margin: 0;
+  }
+
+  .section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    &.blue {
+      background-color: @blue-100;
+
+      i {
+        color: @blue-700;
+      }
+    }
+
+    &.yellow {
+      background-color: @yellow-200;
+
+      i {
+        color: @yellow-700;
+      }
+    }
+  }
+
+  &.ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header {
+    border-radius: 8px;
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      background-color: @grey-100;
+    }
+  }
+
+  &.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+    padding-left: 8px;
+  }
+  &.section.ant-collapse-borderless > .ant-collapse-item {
+    border: none;
+  }
+
+  &.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0;
+  }
+
+  &.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box > .ant-layout {
+    background: none;
+  }
+}

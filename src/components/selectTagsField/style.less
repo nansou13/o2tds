@@ -1,0 +1,126 @@
+@import "../../styles/common";
+
+.select-tag-field {
+    display: inline-block;
+    .select-tag-field-content{
+        display: flex;
+        flex-wrap: wrap;
+        .select-field-tag-select{
+            width: 180px;
+            margin: 0px 0px 8px 4px;
+        }
+        .ant-tag, .anticon{
+            color: #333333;
+            font-weight: 500;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: center;
+        }
+        .select-field-tag {
+            margin: 0px 4px 8px 0px;
+            height: 24px;
+
+            &.adding {
+                opacity: 0.3;
+            }
+
+            &.removing {
+                opacity: 0;
+            }
+        }
+
+        .add-button {
+          font-size: 12px;
+          padding-left: 3px;
+        }
+    }
+    .select-field-content-add-tags-icon {
+        .border(#a3acad);
+        .border-radius(50%);
+        display: flex;
+        flex-shrink: 0;
+        cursor: pointer;
+        margin: auto 5px auto 0;
+        background: #bec4c5;
+        color: black;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 4px 0 5px;
+        transition: background .2s ease-in-out, border .2s ease-in-out;
+
+        .tag-picker-button-icon {
+            font-family: "Times New Roman";
+            font-size: 20px;
+            height: 23px;
+            line-height: 23px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .add-icon {
+                height: 14px;
+                width: 14px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #FFFFFF;
+                }
+
+                &::before {
+                    transform: rotate(90deg);
+                }
+
+                &.black {
+                    &::before,
+                    &::after {
+                        background-color: #000000;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: @hover-blue-o2t;
+            border-color: @hover-blue-o2t;
+            color: #FFFFFF;
+
+            .add-icon.black {
+                &::before,
+                &::after {
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+.select-field-tags-options{
+    margin-top: -8px;
+    .ant-select-dropdown-menu-item{
+        .select-field-tags-option{
+            padding: 2px 7px;
+            margin: 4px 0;
+            height: 20px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 12px;
+            margin-right: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

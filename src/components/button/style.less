@@ -1,0 +1,83 @@
+.filter, .columns-selector, .favorite-button {
+  [ant-click-animating-without-extra-node]:after,
+  .ant-click-animating-node {
+    animation: 0s;
+  }
+  &.small {
+    .ant-btn {
+      padding: 0;
+      width: 36px;
+      .column-selector-icon {
+        height: 16px;
+        display: block;
+        padding-right: 11px;
+        padding-left: 11px;
+      }
+    }
+  }
+
+  .ant-btn {
+    background: @neutral-75;
+    border: none;
+    color: black;
+    font-weight: 500;
+    margin-right: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: left;
+    text-transform: capitalize;
+    &:hover {
+      background: @neutral-100;
+      color: black;
+    }
+  }
+
+  .ant-popover-open{
+    &.ant-btn {
+      background: @neutral-200;
+      color: black;
+    }
+    .anticon-down {
+      font-weight: 100;
+      transform: rotate(180deg);
+    }
+  }
+
+  .anticon-down {
+    font-weight: 100;
+    font-size: 12px;
+    margin-left: 0;
+    color: rgba(0, 0, 0, 0.25);
+    transition: transform .3s;
+  }
+}
+
+.save-view-new {
+  [ant-click-animating-without-extra-node]:after {
+    animation: 0s;
+  }
+}
+
+.ant-btn {
+  box-shadow: none;
+}
+
+.ant-btn-danger{
+  color: @red-500;
+  background-color: @grey-75;
+  border-color: @grey-150;
+  &:hover {
+    background: @red-500;
+    color: white;
+  }
+}
+
+.ant-btn-link {
+  color: @blue-800;
+}
+
+.tags-dropdown-footer, .manage-tags-modal-footer {
+  .ant-btn-link {
+    padding: 0;
+  }
+}

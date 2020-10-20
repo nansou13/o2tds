@@ -1,0 +1,88 @@
+.action-button-component-common() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.action-button-component {
+  .action-button-component-common();
+  background-color: @light-grey-o2t;
+
+  &:hover, &[data-active="true"] {
+    color: white;
+    background-color: @blue-500;
+  }
+}
+
+.action-button-component-flat {
+  .action-button-component-common();
+  background-color: transparent;
+
+  &[data-type='close'] {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: @grey-100;
+  }
+
+  &[data-active="true"], &:active {
+    background-color: @grey-150;
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  height: 30px;
+  line-height: 14px;
+  font-size: 12px;
+
+  .dropdown-item-icon {
+    display: flex;
+    height: 16px;
+    max-width: 16px;
+    margin-right: 8px;
+
+    img {
+      width: 16px;
+    }
+
+    .icon {
+      font-size: 16px;
+    }
+  }
+
+  .dropdown-item-label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: @grey-font-o2t;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .menu-item-delete-button {
+    color: @red-700;
+  }
+}
+
+.action-button-component-close {
+  .action-button-component();
+  background-color: @grey-o2t;
+  color: white;
+  font-size: 11px;
+
+  &:hover {
+    background-color: @dark-red-o2t;
+  }
+}
