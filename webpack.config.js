@@ -8,6 +8,8 @@ const o2tColorVariables = lessToJs(fs.readFileSync(path.join('src/styles/o2tColo
 const antdOverrideVariables = lessToJs(fs.readFileSync(path.join('src/styles/antdOverride.less'), 'utf8'));
 const themeVariables = { ...o2tColorVariables, ...antdOverrideVariables };
 
+const cssFilename = 'static/css/[name].[contenthash:8].css';
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -102,4 +104,29 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    // Generates an `index.html` file with the <script> injected.
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   template: paths.appHtml,
+    //   minify: {
+    //     removeComments: true,
+    //     collapseWhitespace: true,
+    //     removeRedundantAttributes: true,
+    //     useShortDoctype: true,
+    //     removeEmptyAttributes: true,
+    //     removeStyleLinkTypeAttributes: true,
+    //     keepClosingSlash: true,
+    //     minifyJS: true,
+    //     minifyCSS: true,
+    //     minifyURLs: true,
+    //   },
+    // }),
+    
+    new MiniCssExtractPlugin({
+      filename: cssFilename,
+      allChunks: true,
+      ignoreOrder: true,
+    }),
+    ]
 }

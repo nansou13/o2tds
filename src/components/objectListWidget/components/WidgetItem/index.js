@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { EllipsisTooltip } from '../../../../components';
+import { EllipsisTooltip } from '../../../../index';
 import { SortableElement } from 'react-sortable-hoc';
 import DragIcon from './media/dragIcon';
 import './style.less';

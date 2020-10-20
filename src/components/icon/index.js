@@ -9,7 +9,7 @@ const Icon = (props) => {
   const { className, icon, ...rest } = props;
 
   if (DM_BOARD_TYPES.includes(icon)) {
-    const BoardIcon = lazy(() => import(/* webpackChunkName: "Icon" */ `./components/${icon}`));
+    const BoardIcon = lazy(() => import(/* webpackChunkName: "Icon" */ `./Components/${icon}`));
     return (
       <span className={classNames('board-icon-wrapper', className)} {...rest}>
         <Suspense fallback={<div />}>

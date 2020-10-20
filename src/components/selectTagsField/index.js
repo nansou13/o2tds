@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Select, Tag } from 'antd';
 import PropTypes from 'prop-types';
 import { forbidExtraProps } from 'airbnb-prop-types';
-import { Button } from '../../components';
+import { Button } from '../../index';
 import intl from 'react-intl-universal';
 import classNames from 'classnames';
 import { unescape } from '../services/dataTransform';

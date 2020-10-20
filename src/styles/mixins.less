@@ -1,0 +1,40 @@
+.regular {
+  font-weight: 500;
+}
+
+//.medium {
+  //font-weight: 600;
+//}
+
+.bold {
+  font-weight: 700;
+}
+
+.transition(@duration:0.2s, @ease:ease-out, @property:all) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+
+.box-shadow(...) {
+  box-shadow: @arguments;
+}
+
+.box-sizing(@sizing: border-box) {
+  box-sizing: @sizing;
+}
+
+.border(@color: transparent) {
+  border: 1px solid @color;
+}
+
+.border-radius(@radius: 3px) {
+  border-radius: @radius;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
