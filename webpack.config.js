@@ -8,7 +8,7 @@ const o2tColorVariables = lessToJs(fs.readFileSync(path.join('src/styles/o2tColo
 const antdOverrideVariables = lessToJs(fs.readFileSync(path.join('src/styles/antdOverride.less'), 'utf8'));
 const themeVariables = { ...o2tColorVariables, ...antdOverrideVariables };
 
-const cssFilename = 'static/css/[name].[contenthash:8].css';
+const cssFilename = 'index.css';
 
 module.exports = {
   entry: './src/index.js',
